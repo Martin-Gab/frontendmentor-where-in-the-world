@@ -4,7 +4,7 @@
 
 // === Colors ===
 $lightModeText: hsl(200, 15%, 8%);
-$lightModeHeaderBackground: hsl(0, 0%, 100%);
+$lightModeNavBackground: hsl(0, 0%, 100%);
 $lightModeElementsBackground: hsl(0, 0%, 100%);
 $lightModeElementsInfos: hsl(0, 1%, 85%);
 $lightModeBackground: hsl(0, 0%, 98%);
@@ -12,7 +12,7 @@ $lightModeInputBackground: hsl(0, 0%, 100%);
 $lightModeInputText: hsl(0, 0%, 52%);
 
 $darkModeText: hsl(0, 0%, 100%);
-$darkModeHeaderBackground: hsl(209, 23%, 22%);
+$darkModeNavBackground: hsl(209, 23%, 22%);
 $darkModeElementsBackground: hsl(209, 23%, 22%);
 $darkModeBackground: hsl(207, 26%, 17%);
 $darkModeInputBackground: hsl(209, 23%, 22%);
@@ -27,9 +27,14 @@ $semiboldWeight: 600;
 $extraBoldWeight: 800;
 
 $headerTitle: 1rem;
+$headerTitleDesktop: 1.2rem;
 
 $homepageItemsMain: 0.875rem;
 $homepageElementsTitle: 1.1rem;
 
 $detailPageMain: 1rem;
 $detailPageTitle: 1.2rem;
+
+// === Gutters ===
+$navGutterMobile: 2rem 1rem;
+$navGutterDesktop: 2rem 5rem;

@@ -3,3 +3,49 @@
 // ======================
 
 @use '../../styles/vars';
+
+.nav-container {
+    background-color: vars.$lightModeNavBackground;
+    box-shadow: 0 0px 5px 3px rgba(147, 145, 145, 0.733);
+
+    .nav {
+        color: vars.$lightModeText;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: vars.$navGutterMobile;
+        max-width: 1440px;
+        margin: 0 auto;
+    
+        &__title {
+            font-size: vars.$headerTitle;
+            font-weight: vars.$extraBoldWeight;
+        }
+    
+        &__switch-mode {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+    
+            &__icon {
+                margin-right: .4rem;
+            }
+    
+            &__text {
+                font-weight: vars.$semiboldWeight;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .nav-container {
+        .nav {
+            padding: vars.$navGutterDesktop;
+
+            &__title {
+                font-size: vars.$headerTitleDesktop;
+            }
+        }
+    }
+}
