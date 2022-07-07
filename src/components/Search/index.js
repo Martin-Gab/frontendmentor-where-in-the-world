@@ -19,6 +19,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   searchInputChange,
   toggleSearchFilters,
+  addFilter,
+  removeFilter,
 } from '../../actions/search';
 
 const Search = () => {
@@ -28,6 +30,7 @@ const Search = () => {
   // === Values from the searchReducer ===
   const searchInput = useSelector((state) => state.search.searchInput);
   const filterOpen = useSelector((state) => state.search.filterOpen);
+  const filterRegionsSelected = useSelector((state) => state.search.filterRegionsSelected);
 
   return (
     <div className="search-container">
@@ -59,11 +62,71 @@ const Search = () => {
           <div
             className={filterOpen ? 'search__filter__options' : 'search__filter__options search__filter__options--hide'}
           >
-            <div className="search__filter__options__item">Africa</div>
-            <div className="search__filter__options__item">America</div>
-            <div className="search__filter__options__item">Asia</div>
-            <div className="search__filter__options__item">Europe</div>
-            <div className="search__filter__options__item">Oceania</div>
+            <div 
+              className="search__filter__options__item"
+              onClick={(e) => {
+                if (filterRegionsSelected.includes(e.currentTarget.textContent)) {
+                  dispatch(removeFilter(filterRegionsSelected.indexOf(e.currentTarget.textContent)));
+                }
+                else {
+                  dispatch(addFilter(e.currentTarget.textContent));
+                }
+              }}
+            >
+              Africa
+            </div>
+            <div 
+              className="search__filter__options__item"
+              onClick={(e) => {
+                if (filterRegionsSelected.includes(e.currentTarget.textContent)) {
+                  dispatch(removeFilter(filterRegionsSelected.indexOf(e.currentTarget.textContent)));
+                }
+                else {
+                  dispatch(addFilter(e.currentTarget.textContent));
+                }
+              }}
+            >
+              America
+            </div>
+            <div 
+              className="search__filter__options__item"
+              onClick={(e) => {
+                if (filterRegionsSelected.includes(e.currentTarget.textContent)) {
+                  dispatch(removeFilter(filterRegionsSelected.indexOf(e.currentTarget.textContent)));
+                }
+                else {
+                  dispatch(addFilter(e.currentTarget.textContent));
+                }
+              }}
+            >
+              Asia
+            </div>
+            <div 
+              className="search__filter__options__item"
+              onClick={(e) => {
+                if (filterRegionsSelected.includes(e.currentTarget.textContent)) {
+                  dispatch(removeFilter(filterRegionsSelected.indexOf(e.currentTarget.textContent)));
+                }
+                else {
+                  dispatch(addFilter(e.currentTarget.textContent));
+                }
+              }}
+            >
+              Europe
+            </div>
+            <div 
+              className="search__filter__options__item"
+              onClick={(e) => {
+                if (filterRegionsSelected.includes(e.currentTarget.textContent)) {
+                  dispatch(removeFilter(filterRegionsSelected.indexOf(e.currentTarget.textContent)));
+                }
+                else {
+                  dispatch(addFilter(e.currentTarget.textContent));
+                }
+              }}
+            >
+              Oceania
+            </div>
           </div>
         </div>
 

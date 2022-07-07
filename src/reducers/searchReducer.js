@@ -8,6 +8,8 @@
 import {
   SEARCH_INPUT_CHANGE,
   TOOGLE_SEARCH_FILTERS,
+  ADD_FILTER,
+  REMOVE_FILTER,
 } from "../actions/search";
 
 // =================================
@@ -16,6 +18,7 @@ import {
 const initialState = {
   searchInput: '',
   filterOpen: false,
+  filterRegionsSelected: [],
 };
 
 const searchReducer = (state = initialState, action) => {
@@ -31,6 +34,20 @@ const searchReducer = (state = initialState, action) => {
         ...state,
         filterOpen: !state.filterOpen,
       };
+
+    case ADD_FILTER:
+      return {
+        ...state,
+        filterRegionsSelected: state.filterRegionsSelected.concat(action.region),
+      };
+
+    case REMOVE_FILTER:
+      const firstPartOfArray = state.filterRegionsSelected.slice(0, action.index);
+      const secondPartOfArray = state.filterRegionsSelected.slice(action.index + 1);
+      return {
+        ...state,
+        filterRegionsSelected: firstPartOfArray.concat(secondPartOfArray),
+      }
 
     default:
       return state;
