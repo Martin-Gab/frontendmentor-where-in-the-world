@@ -24,16 +24,14 @@ const Search = () => (
       <div className="search__filter">
         <div className="search__filter__select">
           <p>Filter by Region</p>
-          <ChevronDown />
+          <ChevronDown size={16} />
         </div>
-        <div className="search__filter__options">
-          <ul>
-            <li className="search__filter__options__item">Africa</li>
-            <li className="search__filter__options__item">America</li>
-            <li className="search__filter__options__item">Asia</li>
-            <li className="search__filter__options__item">Europe</li>
-            <li className="search__filter__options__item">Oceania</li>
-          </ul>
+        <div className="search__filter__options search__filter__options--hide">
+          <div className="search__filter__options__item">Africa</div>
+          <div className="search__filter__options__item">America</div>
+          <div className="search__filter__options__item">Asia</div>
+          <div className="search__filter__options__item">Europe</div>
+          <div className="search__filter__options__item">Oceania</div>
         </div>
       </div>
 

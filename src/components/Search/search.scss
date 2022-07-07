@@ -25,8 +25,8 @@
             &__field {
                 all: unset;
                 background-color: vars.$lightModeInputBackground;
-                border-radius: 5px;
-                padding: 1rem 5rem;
+                border-radius: vars.$mainBorderRadius;
+                padding: vars.$searchInputGutter;
                 width: 100%;
                 font-size: .8rem;
                 box-shadow: vars.$inputBoxShadow;
@@ -35,6 +35,46 @@
                 &::placeholder {
                     font-size: .8rem;
                     color: vars.$lightModeInputTextPlaceholder;
+                }
+            }
+        }
+
+        &__filter {
+            position: relative;
+            max-width: 205px;
+
+            &__select {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: vars.$lightModeInputBackground;
+                padding: vars.$filterInputGutter;
+                box-shadow: vars.$inputBoxShadow;
+                border-radius: vars.$mainBorderRadius;
+                margin-bottom: .3rem;
+            }
+
+            &__options {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                background-color: vars.$lightModeInputBackground;
+                border-radius: vars.$mainBorderRadius;
+                padding: vars.$filterInputGutter;
+                box-shadow: vars.$inputBoxShadow;
+
+                &--hide {
+                    display: none;
+                }
+
+                &__item {
+                    cursor: pointer;
+                    margin-bottom: .8rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
