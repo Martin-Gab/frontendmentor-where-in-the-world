@@ -2,6 +2,8 @@
 // === App Stylesheet ===
 // ======================
 
+@use '../../styles/vars';
+
 .app {
-    text-align: center;
+    background-color: vars.$lightModeBackground;
 }

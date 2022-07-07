@@ -6,7 +6,7 @@
 
 .nav-container {
     background-color: vars.$lightModeNavBackground;
-    box-shadow: 0 0px 5px 3px rgba(147, 145, 145, 0.733);
+    box-shadow: vars.$navBoxShadow;
 
     .nav {
         color: vars.$lightModeText;

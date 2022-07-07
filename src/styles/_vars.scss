@@ -9,7 +9,9 @@ $lightModeElementsBackground: hsl(0, 0%, 100%);
 $lightModeElementsInfos: hsl(0, 1%, 85%);
 $lightModeBackground: hsl(0, 0%, 98%);
 $lightModeInputBackground: hsl(0, 0%, 100%);
+$lightModeInputIcon: hsl(0, 0%, 52%);
 $lightModeInputText: hsl(0, 0%, 52%);
+$lightModeInputTextPlaceholder: hsl(0, 3%, 75%);
 
 $darkModeText: hsl(0, 0%, 100%);
 $darkModeNavBackground: hsl(209, 23%, 22%);
@@ -38,3 +40,8 @@ $detailPageTitle: 1.2rem;
 // === Gutters ===
 $navGutterMobile: 2rem 1rem;
 $navGutterDesktop: 2rem 5rem;
+$searchGutterMobile: 1.5rem 1rem;
+
+// === Box Shadows ===
+$navBoxShadow: 0 0px 5px 2px rgba(184, 180, 180, 0.733);
+$inputBoxShadow: 0 0px 5px 1px rgba(232, 228, 228, 0.394);

@@ -3,3 +3,40 @@
 // =========================
 
 @use '../../styles/vars';
+
+.search-container {
+    .search {
+        padding: vars.$searchGutterMobile;
+
+        &__input {
+            position: relative;
+            margin: 0 auto 2.5rem;
+            display: flex;
+            align-items: center;
+            max-width: 343px;
+
+            &__icon {
+                position: absolute;
+                left: 2rem;
+                color: vars.$lightModeInputIcon;
+                
+            }
+
+            &__field {
+                all: unset;
+                background-color: vars.$lightModeInputBackground;
+                border-radius: 5px;
+                padding: 1rem 5rem;
+                width: 100%;
+                font-size: .8rem;
+                box-shadow: vars.$inputBoxShadow;
+                color: vars.$lightModeInputText;
+                
+                &::placeholder {
+                    font-size: .8rem;
+                    color: vars.$lightModeInputTextPlaceholder;
+                }
+            }
+        }
+    }
+}
