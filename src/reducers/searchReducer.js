@@ -5,7 +5,10 @@
 // ======================
 // === Actions Import ===
 // ======================
-import { SEARCH_INPUT_CHANGE } from "../actions/search";
+import {
+  SEARCH_INPUT_CHANGE,
+  TOOGLE_SEARCH_FILTERS,
+} from "../actions/search";
 
 // =================================
 // === Initial State declaration ===
@@ -21,7 +24,13 @@ const searchReducer = (state = initialState, action) => {
       return {
         ...state,
         searchInput: action.value,
-      }
+      };
+
+    case TOOGLE_SEARCH_FILTERS:
+      return {
+        ...state,
+        filterOpen: !state.filterOpen,
+      };
 
     default:
       return state;
